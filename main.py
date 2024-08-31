@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from tqdm import tqdm
 
 class System:
     def __init__(self, x0, r0=3.4):
