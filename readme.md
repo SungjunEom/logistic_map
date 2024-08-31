@@ -12,5 +12,5 @@ numpy, matplotlib, tqdm
 The output of the program is below. It will take a while depending on your computer hardware.
 ![alt text](Figure_1.png)
 
-## References
+
 [^1]:Strogatz, S. H. (2018). Nonlinear dynamics and chaos: with applications to physics, biology, chemistry, and engineering. CRC press.
