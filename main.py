@@ -17,26 +17,15 @@ class System:
     
 if __name__ == '__main__':
     sys = System(0.2)
-    full_record = {'r':[], 'x':[]}
-    for j in tqdm(range(600)):
-        r0 = 3.4 + j*0.001
-        next_state = 0.2
-        record = [next_state]
+    r0 = np.linspace(3.4,4,1000)
+    next_state = 0.2
+    
+    for i in range(1000):
+        next_state = sys.next(next_state, r0)
         
-        for i in range(800):
-            next_state = sys.next(next_state, r0)
-            record.append(next_state)
+        if i > 700:
+            plt.plot(r0, next_state, 'k.', markersize=0.1)
 
-        # Check for periodicity within the current record
-        for k in range(len(record)): 
-            for l in range(k+1, len(record)): # Compare against all subsequent states
-                if abs(record[k] - record[l]) < 1e-4:
-                    # period = (l - k)  # Calculate period length
-                    # print(f"Periodicity detected at r={r0:.4f}: Period {period}")
-                    full_record['r'].append(r0)
-                    full_record['x'].append(record[k])
-
-    plt.scatter(full_record['r'], full_record['x'], s=0.1)
     plt.xlabel('r')
     plt.ylabel('x')
     plt.show()
