@@ -9,7 +9,6 @@ This is one of the famous examples of chaos and fractal. [^1]
 numpy, matplotlib, tqdm
 ```
 ## Bifurcation diagram
-The output of the program is below. It will take a while depending on your computer hardware.
 ![alt text](Figure_1.png)
 
 
