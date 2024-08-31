@@ -36,5 +36,5 @@ if __name__ == '__main__':
                     full_record['r'].append(r0)
                     full_record['x'].append(record[k])
 
-    plt.scatter(full_record['r'], full_record['x'], s=1)
+    plt.scatter(full_record['r'], full_record['x'], s=0.1)
     plt.show()
